@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em;
+}
+
+.nav-link {
+  color: #673ab7;
+}
+.nav-link:hover {
+  color: #6f36b3;
+  text-shadow: #0003 0 0 2px;
+}
+.nav-link:not(:hover) {
+  text-decoration: none;
+}
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.logo img {
+  height: 5vh;
+  width: 7vw;
+}
+
+.kart {
+  display: flex;
+  align-items: center;
+}
+
+.kart img {
+  padding-right: 5px;
+  height: 2vw;
+  width: 2vw;
+}

@@ -1,0 +1,24 @@
+.video {
+    height: 42vw;
+    width: 96%;
+    margin: 2%;
+}
+
+.news-title {
+    text-align: center;
+    font-weight: normal;
+}
+
+.news-blocks {
+    width: 96%;
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-block {
+    background-color: #cccccc;
+    border-radius: 3%;
+    height: 50vh;
+    width: 45vw;
+}
