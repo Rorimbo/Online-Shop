@@ -10,7 +10,7 @@ import { CartItem } from './Types/CartItem';
 })
 export class AppComponent {
   cartItems: CartItem[] = [];
-  total: number;
+  total: number = 0;
 
   constructor() {}
 
