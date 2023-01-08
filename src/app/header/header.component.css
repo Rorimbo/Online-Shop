@@ -30,13 +30,27 @@
   width: 7vw;
 }
 
-.kart {
+.cart {
   display: flex;
   align-items: center;
 }
 
-.kart img {
+.cart img {
   padding-right: 5px;
   height: 2vw;
   width: 2vw;
+}
+
+.cart-link {
+  color: #673ab7;
+}
+.cart-link:hover {
+  color: #6f36b3;
+  text-shadow: #0003 0 0 2px;
+}
+.cart-link:not(:hover) {
+  text-decoration: none;
+}
+.cart-link.active {
+  text-decoration: underline;
 }

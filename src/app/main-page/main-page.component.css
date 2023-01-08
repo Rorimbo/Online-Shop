@@ -10,10 +10,10 @@
 }
 
 .news-blocks {
-    width: 96%;
-    margin: 2%;
     display: flex;
     justify-content: space-between;
+    width: 96%;
+    margin: 2%;
 }
 
 .news-block {

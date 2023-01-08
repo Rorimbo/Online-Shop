@@ -2,11 +2,15 @@
   <div class="logo"><img src="../../assets/Logo.png" alt="Logo" /></div>
   <div class="links">
     <div class="link" *ngFor="let link of links">
-      <a [routerLink]="link.url" routerLinkActive="active" class="nav-link"> {{ link.name | uppercase }} </a>
+      <a [routerLink]="link.url" routerLinkActive="active" class="nav-link">
+        {{ link.name | uppercase }}
+      </a>
     </div>
   </div>
-  <div class="kart">
-    <img src="../../assets/kart.png" alt="Kart" />
-    <span> {{ "Корзина (4500 руб)" | uppercase }} </span>
+  <div class="cart">
+    <img src="../../assets/Cart.png" alt="Cart" />
+    <a class="cart-link" routerLink="/cart" routerLinkActive="active">
+      {{ "корзина (" + total + "₽)" | uppercase }}
+    </a>
   </div>
 </div>

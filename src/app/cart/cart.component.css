@@ -1,0 +1,79 @@
+@import "../app.component.css";
+
+.cart-list {
+  list-style: none;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.5em;
+  margin-right: 5em;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 7fr 1fr 2fr;
+  padding: 6px;
+  width: 50vw;
+  background-color: #d4d4d4;
+  border-radius: 2vh;
+  margin-right: 3em;
+  margin-bottom: 1em;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.column:first-child,
+.column:last-child {
+  background-color: #ccc;
+  border-radius: 2vh;
+}
+
+.product-column {
+  justify-content: flex-start;
+}
+.product-photo {
+  height: 10em;
+  padding: 6px;
+  margin-right: 10px;
+  border-radius: 2vh;
+}
+
+.count-column,
+.price-column {
+  justify-content: center;
+}
+
+.delete-btn {
+  width: 4vh;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  width: 4.5vh;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text {
+  margin: 0.5em;
+  font-size: 18px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 20px;
+}

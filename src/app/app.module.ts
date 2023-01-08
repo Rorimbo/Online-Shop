@@ -7,6 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { CollectionsComponent } from './collections/collections.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { SwiperModule } from 'swiper/angular';
+import { ModelComponent } from './model/model.component';
+import { FaqComponent } from './faq/faq.component';
+import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,13 +21,15 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     CollectionsComponent,
     MainPageComponent,
-    FooterComponent
+    FooterComponent,
+    ModelComponent,
+    FaqComponent,
+    AboutComponent,
+    CartComponent,
+    OrderComponent,
   ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule
-  ],
+  imports: [AppRoutingModule, BrowserModule, SwiperModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

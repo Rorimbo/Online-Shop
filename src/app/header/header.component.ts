@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Link } from '../Types/Link';
 
 @Component({
@@ -7,6 +7,8 @@ import { Link } from '../Types/Link';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+  @Input('total') total: number = 0;
+
   links: Link[] = [
     { id: 0, name: 'Главная', url: '/main' },
     { id: 1, name: 'Коллекции', url: '/collections' },

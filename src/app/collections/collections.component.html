@@ -1,1 +1,29 @@
-<p>collections works!</p>
+<swiper
+  [slidesPerView]="1"
+  [spaceBetween]="30"
+  [loop]="true"
+  [pagination]="{
+    clickable: true
+  }"
+  [navigation]="true"
+  [autoplay]="true"
+  class="swiper"
+>
+  <ng-template swiperSlide>
+    <img src="../../assets/SliderWhite.png" alt="Preview-Slider"
+  /></ng-template>
+
+  <ng-template swiperSlide>
+    <img src="../../assets/SliderBlack.png" alt="Preview-Slider"
+  /></ng-template>
+</swiper>
+
+<div class="item-blocks">
+  <div *ngFor="let item of items" class="item-block">
+    <a class="item-link" [routerLink]="'model/' + item.id">
+      <img class="item-img" [src]="item.previewUrl" [alt]="item.name" />
+      <p class="item-text">{{ item.name + " " + item.color | uppercase }}</p>
+      <p class="item-price">{{ item.price }}₽</p>
+    </a>
+  </div>
+</div>

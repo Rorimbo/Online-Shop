@@ -1,0 +1,36 @@
+@import "../app.component.css";
+
+.item-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: 2em;
+}
+
+.item-block {
+  height: 456px;
+  width: 240px;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.item-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.item-img {
+  height: 85%;
+  width: 100%;
+}
+
+.item-text {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-price {
+  margin: 0;
+  font-size: 18px;
+  text-align: right;
+}

@@ -1,0 +1,249 @@
+<div class="order">
+  <h1 class="title">{{ "оформление заказа" | uppercase }}</h1>
+  <form [formGroup]="orderForm" (ngSubmit)="submitForm()">
+    <div class="contact">
+      <h2 class="subtitle">Контактные данные</h2>
+      <div class="information">
+        <div class="row">
+          <label for="name" class="input-label">Ф.И.О.</label>
+          <input
+            id="name"
+            class="form-input"
+            type="text"
+            formControlName="name"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('name')?.invalid &&
+              (this.getFormControl('name')?.touched ||
+                this.getFormControl('name')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('name')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="email" class="input-label">Электронная почта</label>
+          <input
+            id="email"
+            class="form-input"
+            type="email"
+            formControlName="email"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('email')?.invalid &&
+              (this.getFormControl('email')?.touched ||
+                this.getFormControl('email')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('email')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+            <span *ngIf="this.getFormControl('email')!['errors']!['email']"
+              >Пожалуйста, введите корректный email</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="phone" class="input-label">Телефон</label>
+          <input
+            id="phone"
+            class="form-input"
+            type="tel"
+            formControlName="phone"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('phone')?.invalid &&
+              (this.getFormControl('phone')?.touched ||
+                this.getFormControl('phone')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('phone')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+            <span *ngIf="this.getFormControl('email')!['errors']!['required']"
+              >Некорректный номер</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="comment" class="input-label">Комментарий</label>
+          <input
+            id="comment"
+            class="form-input"
+            type="text"
+            formControlName="comment"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="delivery">
+      <h2 class="subtitle">Доставка</h2>
+      <div class="information">
+        <div class="row">
+          <label for="country" class="input-label">Страна</label>
+          <input
+            id="country"
+            class="form-input"
+            type="text"
+            formControlName="country"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('country')?.invalid &&
+              (this.getFormControl('country')?.touched ||
+                this.getFormControl('country')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('country')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="address" class="input-label">Адрес</label>
+          <input
+            id="address"
+            class="form-input"
+            type="text"
+            formControlName="address"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('address')?.invalid &&
+              (this.getFormControl('address')?.touched ||
+                this.getFormControl('address')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('address')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="city" class="input-label">Город</label>
+          <input
+            id="city"
+            class="form-input"
+            type="text"
+            formControlName="city"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('city')?.invalid &&
+              (this.getFormControl('city')?.touched ||
+                this.getFormControl('city')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('city')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="index" class="input-label">Индекс</label>
+          <input
+            id="index"
+            class="form-input"
+            type="number"
+            formControlName="index"
+          />
+          <div
+            *ngIf="
+              this.getFormControl('index')?.invalid &&
+              (this.getFormControl('index')?.touched ||
+                this.getFormControl('index')?.dirty)
+            "
+          >
+            <span *ngIf="this.getFormControl('index')!['errors']!['required']"
+              >Это <strong>обязательное</strong> поле</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="subtitle">Способ доставки</h2>
+        <div class="delivery-method-choosing">
+          <div class="radio-row">
+            <label for="pickup" class="radio-label">Самовывоз</label>
+            <input
+              id="pickup"
+              class="radiobutton"
+              name="delivery"
+              type="radio"
+              value="Самовывоз"
+              formControlName="delivery"
+            />
+          </div>
+          <div class="radio-row">
+            <label for="courier" class="radio-label">Курьер</label>
+            <input
+              id="courier"
+              class="radiobutton"
+              name="delivery"
+              type="radio"
+              value="Курьер"
+              formControlName="delivery"
+            />
+          </div>
+          <div class="radio-row">
+            <label for="post" class="radio-label">Почта</label>
+            <input
+              id="post"
+              class="radiobutton"
+              name="delivery"
+              type="radio"
+              value="Почта"
+              formControlName="delivery"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pay">
+      <h2 class="subtitle">Способ оплаты</h2>
+      <div class="information">
+        <div class="row-radio">
+          <label for="cash" class="radio-label">Наличный расчет</label>
+          <input
+            id="cash"
+            class="radiobutton"
+            name="pay"
+            type="radio"
+            value="Наличный расчет"
+            formControlName="pay"
+          />
+        </div>
+        <div class="row-radio">
+          <label for="card" class="radio-label">Безналичный расчет</label>
+          <input
+            id="card"
+            class="radiobutton"
+            name="pay"
+            type="radio"
+            value="Безналичный расчет"
+            formControlName="pay"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="btn-styles">
+    <button type="submit" [disabled]="orderForm.invalid" class="btn">
+      {{ "подтвердить заказ" | uppercase }}
+    </button>
+  </div>
+</div>

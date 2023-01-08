@@ -1,0 +1,41 @@
+<div class="model" *ngIf="this.currentItem">
+  <div class="model-swiper">
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [loop]="true"
+      [pagination]="{
+        clickable: true
+      }"
+      [navigation]="true"
+      class="swiper"
+    >
+      <ng-template swiperSlide *ngFor="let url of this.currentItem.imagesUrls">
+        <img [src]="url" alt="Slider"
+      /></ng-template>
+    </swiper>
+  </div>
+
+  <div class="model-params">
+    <form [formGroup]="orderForm" (ngSubmit)="submitForm()">
+      <h2 class="model-text">{{ currentItem.name | uppercase }}</h2>
+      <h3 class="model-type">{{ currentItem.type | uppercase }}</h3>
+      <p class="model-description">{{ currentItem.description }}</p>
+      <p class="model-color">Цвет: {{ currentItem.color }}</p>
+      <p class="model-sizes">
+        Размер:
+        <span *ngFor="let size of currentItem.sizes" class="model-size">
+          <input
+            id="size"
+            type="radio"
+            [value]="size"
+            formControlName="size"
+          />{{ size }}
+        </span>
+      </p>
+      <button type="submit" [disabled]="orderForm.invalid" class="btn">
+        {{ "добавить в корзину" | uppercase }}
+      </button>
+    </form>
+  </div>
+</div>
