@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 4em;
   margin: 2em;
 }
 
@@ -25,9 +26,19 @@
   width: 35%;
 }
 
+.logo {
+  height: 7vh;
+  width: 10vw;
+}
+
 .logo img {
   height: 5vh;
   width: 7vw;
+}
+
+.logo:hover img {
+  height: 7vh;
+  width: 10vw;
 }
 
 .cart {
@@ -37,8 +48,8 @@
 
 .cart img {
   padding-right: 5px;
-  height: 2vw;
-  width: 2vw;
+  height: 17px;
+  width: 20px;
 }
 
 .cart-link {

@@ -69,5 +69,7 @@ export class ModelComponent {
         this.cartItems.unshift(newCartItem);
       }
     }
+
+    alert('Товар добавлен в корзину');
   }
 }
