@@ -14,6 +14,8 @@ import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     OrderComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, SwiperModule, ReactiveFormsModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    SwiperModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatRadioModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

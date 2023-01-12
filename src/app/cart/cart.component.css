@@ -1,14 +1,11 @@
-@import "../app.component.css";
-
-.cart-list {
-  list-style: none;
-}
-
 .cart {
   display: flex;
   justify-content: space-between;
-  margin-left: 1.5em;
   margin-right: 5em;
+}
+
+.cart-list {
+  list-style: none;
 }
 
 .cart-item {
@@ -31,6 +28,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  margin: 0;
 }
 .column:first-child,
 .column:last-child {
@@ -41,6 +39,11 @@
 .product-column {
   justify-content: flex-start;
 }
+
+.product-column p:last-child {
+  margin: 0;
+}
+
 .product-photo {
   height: 10em;
   padding: 6px;
@@ -70,7 +73,7 @@
 
 .text {
   margin: 0.5em;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .empty {

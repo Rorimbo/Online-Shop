@@ -1,5 +1,3 @@
-@import "../app.component.css";
-
 .order {
   margin: 0 20em;
 }
@@ -35,36 +33,58 @@
   width: 100%;
   height: 1.5em;
   border-radius: 0.5em;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   margin-top: 0.5em;
+  padding: 0.5em;
+}
+
+.delivery-method-choosing {
+  margin-bottom: 2em;
+}
+
+.pay-method-choosing {
+  display: grid;
+  grid-column-gap: 5em;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2em;
 }
 
 .radio-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 98%;
-  height: 3em;
+  width: 100%;
+  height: 4em;
   border-radius: 0.5em;
-  border: 1px solid #333;
+  background-color: #ffffff;
+  border: 1px solid #333333;
   margin-bottom: 1em;
-  padding: 0.5em;
 }
 
-.row-radio {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 96%;
-  height: 3em;
-  border-radius: 0.5em;
-  border: 1px solid #333;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
+.mat-mdc-radio-button {
+  width: 100% !important;
+  /* цвет фигуры */
+  --mdc-radio-disabled-selected-icon-color: #ff0000;
+  --mdc-radio-disabled-unselected-icon-color: #ff0000;
+  --mdc-radio-unselected-focus-icon-color: #bc38d3; /* нажатие и отведение */
+  --mdc-radio-unselected-hover-icon-color: #bc38d3; /* наведение */
+  --mdc-radio-unselected-icon-color: #c262d3; /* изначальный */
+  --mdc-radio-unselected-pressed-icon-color: #8f04a8; /* удержание */
+  --mat-mdc-radio-ripple-color: #c262d3; /* фон предвыбора */
+  --mdc-theme-text-primary-on-background: #333333;
+}
+
+.mat-accent {
+  /* цвет выбора */
+  --mdc-radio-selected-focus-icon-color: #ff0000 !important;
+  --mdc-radio-selected-hover-icon-color: #c26bd1 !important; /* наведение */
+  --mdc-radio-selected-icon-color: #bc38d3 !important; /* выбранный */
+  --mdc-radio-selected-pressed-icon-color: #8f04a8 !important; /* удержание */
+  --mat-mdc-radio-checked-ripple-color: #c26bd1 !important; /* фон */
 }
 
 .ng-invalid.ng-touched {
-  border-color: red;
+  border-color: #ff3333;
 }
 
 .btn-styles {

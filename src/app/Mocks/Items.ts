@@ -3,8 +3,8 @@ import { Item } from '../Types/Item';
 export const ITEMS: Item[] = [
   {
     id: 0,
-    name: 'ghost in the graveyard',
-    type: 't-shirt',
+    name: 'Ghost in the graveyard',
+    type: 'T-shirt',
     description: 'Описание',
     color: 'White',
     sizes: ['S', 'M', 'L'],
@@ -18,8 +18,8 @@ export const ITEMS: Item[] = [
   },
   {
     id: 1,
-    name: 'ghost in the graveyard',
-    type: 't-shirt',
+    name: 'Ghost in the graveyard',
+    type: 'T-shirt',
     description: 'Описание',
     color: 'Black',
     sizes: ['S', 'M', 'L'],

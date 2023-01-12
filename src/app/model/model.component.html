@@ -22,12 +22,19 @@
     <p class="model-description model-text">{{ currentItem.description }}</p>
     <p class="model-text">Цвет: {{ currentItem.color }}</p>
     <p class="model-sizes">
-      Размер:
-      <span *ngFor="let size of currentItem.sizes" class="model-size">
-        <input id="size" type="radio" [value]="size" formControlName="size" />{{
-          size
-        }}
-      </span>
+      <mat-radio-group
+        aria-label="Select an option"
+        formControlName="size"
+        class="radio-group"
+        >Размер:
+        <mat-radio-button
+          *ngFor="let size of currentItem.sizes"
+          class="model-size"
+          [value]="size"
+        >
+          {{ size }}
+        </mat-radio-button>
+      </mat-radio-group>
     </p>
     <button type="submit" [disabled]="orderForm.invalid" class="btn">
       {{ "добавить в корзину" | uppercase }}
