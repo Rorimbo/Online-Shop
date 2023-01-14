@@ -1,7 +1,26 @@
 <div class="header">
+  <div class="menu-button">
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+      class="menu-icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let link of links">
+        <a [routerLink]="link.url" routerLinkActive="active" class="nav-link">
+          {{ link.name | uppercase }}
+        </a>
+      </button>
+    </mat-menu>
+  </div>
+
   <a routerLink="" class="logo"
-    ><img src="../../assets/Logo.png" alt="Logo"
-  /></a>
+    ><img src="../../assets/Logo.png" alt="Logo" />
+  </a>
+
   <div class="links">
     <div class="link" *ngFor="let link of links">
       <a [routerLink]="link.url" routerLinkActive="active" class="nav-link">
@@ -9,9 +28,12 @@
       </a>
     </div>
   </div>
+
   <div class="cart">
-    <img src="../../assets/Cart.png" alt="Cart" />
-    <a class="cart-link" routerLink="/cart" routerLinkActive="active">
+    <a class="cart-icon" routerLink="/cart" routerLinkActive="active">
+      <mat-icon class="icon">shopping_cart</mat-icon>
+    </a>
+    <a class="cart-text" routerLink="/cart" routerLinkActive="active">
       {{ "корзина (" + total + "₽)" | uppercase }}
     </a>
   </div>

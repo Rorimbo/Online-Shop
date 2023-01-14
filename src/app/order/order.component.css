@@ -25,18 +25,28 @@
   margin-bottom: 2em;
 }
 
-.row {
+/*.row {
   margin-bottom: 0.5em;
+}*/
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
 }
 
-.form-input {
+.example-full-width {
+  width: 100%;
+}
+
+/*.form-input {
   width: 100%;
   height: 1.5em;
   border-radius: 0.5em;
   border: 1px solid #333333;
   margin-top: 0.5em;
   padding: 0.5em;
-}
+}*/
 
 .delivery-method-choosing {
   margin-bottom: 2em;
@@ -55,32 +65,9 @@
   justify-content: space-between;
   width: 100%;
   height: 4em;
-  border-radius: 0.5em;
   background-color: #ffffff;
-  border: 1px solid #333333;
+  border-bottom: 1px solid #333333;
   margin-bottom: 1em;
-}
-
-.mat-mdc-radio-button {
-  width: 100% !important;
-  /* цвет фигуры */
-  --mdc-radio-disabled-selected-icon-color: #ff0000;
-  --mdc-radio-disabled-unselected-icon-color: #ff0000;
-  --mdc-radio-unselected-focus-icon-color: #bc38d3; /* нажатие и отведение */
-  --mdc-radio-unselected-hover-icon-color: #bc38d3; /* наведение */
-  --mdc-radio-unselected-icon-color: #c262d3; /* изначальный */
-  --mdc-radio-unselected-pressed-icon-color: #8f04a8; /* удержание */
-  --mat-mdc-radio-ripple-color: #c262d3; /* фон предвыбора */
-  --mdc-theme-text-primary-on-background: #333333;
-}
-
-.mat-accent {
-  /* цвет выбора */
-  --mdc-radio-selected-focus-icon-color: #ff0000 !important;
-  --mdc-radio-selected-hover-icon-color: #c26bd1 !important; /* наведение */
-  --mdc-radio-selected-icon-color: #bc38d3 !important; /* выбранный */
-  --mdc-radio-selected-pressed-icon-color: #8f04a8 !important; /* удержание */
-  --mat-mdc-radio-checked-ripple-color: #c26bd1 !important; /* фон */
 }
 
 .ng-invalid.ng-touched {

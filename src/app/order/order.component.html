@@ -4,7 +4,18 @@
     <div class="contact">
       <h2 class="subtitle">Контактные данные</h2>
       <div class="information">
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Ф.И.О.</mat-label>
+            <input matInput formControlName="name" />
+
+            <mat-error *ngIf="orderForm.controls['name'].hasError('required')">
+              Обязательное поле
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <!-- <div class="row">
           <label for="name" class="input-label">Ф.И.О.</label>
           <input
             id="name"
@@ -23,9 +34,25 @@
               >Это <strong>обязательное</strong> поле</span
             >
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" />
+          <mat-error
+            *ngIf="
+              orderForm.controls['email'].hasError('email') &&
+              !orderForm.controls['email'].hasError('required')
+            "
+          >
+            Пожалуйста, введите корректный email
+          </mat-error>
+          <mat-error *ngIf="orderForm.controls['email'].hasError('required')">
+            Это <strong>обязательное</strong> поле
+          </mat-error>
+        </mat-form-field>
+
+        <!-- <div class="row">
           <label for="email" class="input-label">Электронная почта</label>
           <input
             id="email"
@@ -47,9 +74,18 @@
               >Пожалуйста, введите корректный email</span
             >
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Телефон</mat-label>
+            <span matPrefix> +7 &nbsp;</span>
+            <input type="tel" matInput placeholder="555-555-1234" />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+        </form>
+
+        <!-- <div class="row">
           <label for="phone" class="input-label">Телефон</label>
           <input
             id="phone"
@@ -71,9 +107,18 @@
               >Некорректный номер</span
             >
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Комментарий</mat-label>
+            <input matInput #message maxlength="256" />
+            <mat-hint align="start"> </mat-hint>
+            <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+          </mat-form-field>
+        </form>
+
+        <!-- <div class="row">
           <label for="comment" class="input-label">Комментарий</label>
           <input
             id="comment"
@@ -81,14 +126,26 @@
             type="text"
             formControlName="comment"
           />
-        </div>
+        </div>-->
       </div>
     </div>
 
     <div class="delivery">
       <h2 class="subtitle">Доставка</h2>
       <div class="information">
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Страна</mat-label>
+            <input matInput formControlName="country" />
+            <mat-error
+              *ngIf="orderForm.controls['country'].hasError('required')"
+            >
+              Обязательное поле
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <!--<div class="row">
           <label for="country" class="input-label">Страна</label>
           <input
             id="country"
@@ -107,9 +164,21 @@
               >Это <strong>обязательное</strong> поле</span
             >
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Адрес</mat-label>
+            <input matInput formControlName="address" />
+            <mat-error
+              *ngIf="orderForm.controls['address'].hasError('required')"
+            >
+              Обязательное поле
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <!--<div class="row">
           <label for="address" class="input-label">Адрес</label>
           <input
             id="address"
@@ -128,9 +197,19 @@
               >Это <strong>обязательное</strong> поле</span
             >
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Город</mat-label>
+            <input matInput formControlName="city" />
+            <mat-error *ngIf="orderForm.controls['city'].hasError('required')">
+              Обязательное поле
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <!--<div class="row">
           <label for="city" class="input-label">Город</label>
           <input
             id="city"
@@ -149,9 +228,19 @@
               >Это <strong>обязательное</strong> поле</span
             >
           </div>
-        </div>
+        </div> -->
 
-        <div class="row">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Индекс</mat-label>
+            <input matInput formControlName="index" />
+            <mat-error *ngIf="orderForm.controls['index'].hasError('required')">
+              Обязательное поле
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <!--<div class="row">
           <label for="index" class="input-label">Индекс</label>
           <input
             id="index"
@@ -170,7 +259,7 @@
               >Это <strong>обязательное</strong> поле</span
             >
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
 
