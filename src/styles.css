@@ -78,6 +78,14 @@ body {
   margin: 0 !important;
 }
 
+.mat-mdc-radio-checked label {
+  color: #333333;
+}
+
+.mdc-form-field:hover label {
+  color: #333333;
+}
+
 .mat-mdc-radio-button {
   width: 100% !important;
   /* цвет фигуры */

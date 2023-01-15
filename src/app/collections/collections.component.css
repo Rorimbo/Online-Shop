@@ -60,12 +60,26 @@
     content: none;
   }
 
+  .item-blocks {
+    align-items: center;
+    flex-direction: column;
+  }
+
   .item-block {
-    width: 25%;
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 989px) {
+  .item-blocks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .item-block {
+    width: 80%;
+    height: 60%;
+  }
 }
 
 @media screen and (min-width: 990px) {

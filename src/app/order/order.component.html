@@ -1,11 +1,11 @@
 <div class="order">
   <h1 class="title">{{ "оформление заказа" | uppercase }}</h1>
   <form [formGroup]="orderForm" (ngSubmit)="submitForm()">
-    <div class="contact">
+    <div>
       <h2 class="subtitle">Контактные данные</h2>
       <div class="information">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Ф.И.О.</mat-label>
             <input matInput formControlName="name" />
 
@@ -36,7 +36,7 @@
           </div>
         </div> -->
 
-        <mat-form-field class="form-field" appearance="fill">
+        <mat-form-field class="order-field" appearance="fill">
           <mat-label>Email</mat-label>
           <input type="email" matInput formControlName="email" />
           <mat-error
@@ -76,8 +76,8 @@
           </div>
         </div> -->
 
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Телефон</mat-label>
             <span matPrefix> +7 &nbsp;</span>
             <input type="tel" matInput placeholder="555-555-1234" />
@@ -109,16 +109,18 @@
           </div>
         </div> -->
 
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Комментарий</mat-label>
             <input matInput #message maxlength="256" />
             <mat-hint align="start"> </mat-hint>
             <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
           </mat-form-field>
         </form>
+      </div>
+    </div>
 
-        <!-- <div class="row">
+    <!-- <div class="row">
           <label for="comment" class="input-label">Комментарий</label>
           <input
             id="comment"
@@ -127,14 +129,12 @@
             formControlName="comment"
           />
         </div>-->
-      </div>
-    </div>
 
-    <div class="delivery">
+    <div>
       <h2 class="subtitle">Доставка</h2>
       <div class="information">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Страна</mat-label>
             <input matInput formControlName="country" />
             <mat-error
@@ -166,8 +166,8 @@
           </div>
         </div> -->
 
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Адрес</mat-label>
             <input matInput formControlName="address" />
             <mat-error
@@ -199,8 +199,8 @@
           </div>
         </div> -->
 
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Город</mat-label>
             <input matInput formControlName="city" />
             <mat-error *ngIf="orderForm.controls['city'].hasError('required')">
@@ -230,8 +230,8 @@
           </div>
         </div> -->
 
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
+        <form class="order-field">
+          <mat-form-field class="order-field-form">
             <mat-label>Индекс</mat-label>
             <input matInput formControlName="index" />
             <mat-error *ngIf="orderForm.controls['index'].hasError('required')">
@@ -239,8 +239,10 @@
             </mat-error>
           </mat-form-field>
         </form>
+      </div>
+    </div>
 
-        <!--<div class="row">
+    <!--<div class="row">
           <label for="index" class="input-label">Индекс</label>
           <input
             id="index"
@@ -260,8 +262,6 @@
             >
           </div>
         </div>-->
-      </div>
-    </div>
 
     <div class="information">
       <div class="delivery-method-choosing">
