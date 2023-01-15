@@ -49,18 +49,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 989px) {
   .video {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
   }
-
-  .news-blocks {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .news-block {
-    min-height: 25vh;
-  }
-}
-@media screen and (min-width: 990px) {
 }

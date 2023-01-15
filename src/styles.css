@@ -68,11 +68,13 @@ body {
 .mdc-form-field {
   display: flex !important;
   justify-content: space-between;
-  width: calc(100%-2em);
+  width: 100%;
   margin: 1em !important;
+  font-size: 16px;
 }
 
 .mdc-form-field label {
+  color: #aaaaaa;
   margin: 0 !important;
 }
 

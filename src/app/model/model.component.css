@@ -26,8 +26,8 @@
 }
 
 .mdc-form-field {
-  margin: 0;
-  margin-right: 0.5em;
+  justify-content: flex-start;
+  margin: 0 !important;
 }
 
 .model-text {
@@ -37,4 +37,27 @@
 
 .model-description {
   height: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .model {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: fit-content;
+  }
+
+  .model-swiper {
+    margin: 0;
+  }
+  /*.model {
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .model-swiper {
+    margin: 0;
+  }*/
 }

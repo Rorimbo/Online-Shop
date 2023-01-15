@@ -263,56 +263,57 @@
       </div>
     </div>
 
-    <div class="delivery-method">
-      <h2 class="subtitle">Способ доставки</h2>
+    <div class="information">
       <div class="delivery-method-choosing">
-        <mat-radio-group
-          aria-label="Select an option"
-          formControlName="delivery"
-          [labelPosition]="'before'"
-        >
-          <div class="radio-row">
-            <mat-radio-button class="radiobutton" value="Самовывоз">
-              Самовывоз
-            </mat-radio-button>
-          </div>
+        <h2 class="subtitle">Способ доставки</h2>
+        <div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="delivery"
+            [labelPosition]="'before'"
+          >
+            <div class="radio-row">
+              <mat-radio-button class="radiobutton" value="Самовывоз">
+                Самовывоз
+              </mat-radio-button>
+            </div>
 
-          <div class="radio-row">
-            <mat-radio-button class="radiobutton" value="Курьер">
-              Курьер
-            </mat-radio-button>
-          </div>
+            <div class="radio-row">
+              <mat-radio-button class="radiobutton" value="Курьер">
+                Курьер
+              </mat-radio-button>
+            </div>
 
-          <div class="radio-row">
-            <mat-radio-button class="radiobutton" value="Почта">
-              Почта
-            </mat-radio-button>
-          </div>
-        </mat-radio-group>
+            <div class="radio-row">
+              <mat-radio-button class="radiobutton" value="Почта">
+                Почта
+              </mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div>
       </div>
-    </div>
 
-    <div class="pay-method">
-      <h2 class="subtitle">Способ оплаты</h2>
-      <div>
-        <mat-radio-group
-          aria-label="Select an option"
-          formControlName="pay"
-          class="pay-method-choosing"
-          [labelPosition]="'before'"
-        >
-          <div class="radio-row">
-            <mat-radio-button class="radiobutton" value="Наличный расчет">
-              Наличный расчет
-            </mat-radio-button>
-          </div>
+      <div class="pay-method-choosing">
+        <h2 class="subtitle">Способ оплаты</h2>
+        <div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="pay"
+            [labelPosition]="'before'"
+          >
+            <div class="radio-row">
+              <mat-radio-button class="radiobutton" value="Наличный расчет">
+                Наличный расчет
+              </mat-radio-button>
+            </div>
 
-          <div class="radio-row">
-            <mat-radio-button class="radiobutton" value="Безналичный расчет">
-              Безналичный расчет
-            </mat-radio-button>
-          </div>
-        </mat-radio-group>
+            <div class="radio-row">
+              <mat-radio-button class="radiobutton" value="Безналичный расчет">
+                Безналичный расчет
+              </mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div>
       </div>
     </div>
   </form>
