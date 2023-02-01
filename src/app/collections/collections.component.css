@@ -17,7 +17,7 @@
 }
 
 .item-block {
-  height: 25%;
+  height: fit-content;
   width: 15%;
   margin-right: 2em;
   margin-bottom: 2em;
@@ -67,6 +67,13 @@
 
   .item-block {
     width: 50%;
+    height: fit-content;
+    margin-right: 0;
+  }
+
+  .item-text,
+  .item-price {
+    font-size: 14px;
   }
 }
 
@@ -78,9 +85,11 @@
 
   .item-block {
     width: 80%;
-    height: 60%;
+    height: fit-content;
   }
-}
 
-@media screen and (min-width: 990px) {
+  .item-text,
+  .item-price {
+    font-size: 14px;
+  }
 }

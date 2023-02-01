@@ -1,4 +1,4 @@
 .content {
-  min-height: calc(100vh - 112px - 6em);
-  margin: 2em;
+  min-height: calc(100vh - 112px - 4em);
+  margin: 0 2em;
 }
