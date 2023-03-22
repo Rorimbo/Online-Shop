@@ -13,6 +13,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { CartItem } from '../Types/CartItem';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -31,7 +33,7 @@ export class ModelComponent {
 
   orderForm: FormGroup;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, public dialog: MatDialog) {
     this.orderForm = new FormGroup({
       size: new FormControl('', [Validators.required]),
     });
@@ -70,6 +72,12 @@ export class ModelComponent {
       }
     }
 
-    alert('Товар добавлен в корзину');
+    this.openDialog();
+  }
+
+  openDialog() {
+    this.dialog.open(DialogComponent, {
+      data: { dialogText: 'Товар добавлен в корзину' },
+    });
   }
 }

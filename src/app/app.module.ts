@@ -20,6 +20,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { MatButtonModule } from '@angular/material/button';
     AboutComponent,
     CartComponent,
     OrderComponent,
+    DialogComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -45,6 +49,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
