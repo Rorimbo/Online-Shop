@@ -2,9 +2,9 @@
 @import "~swiper/css/pagination";
 @import "~swiper/css/navigation";
 
-body {
+* {
   margin: 0;
-  font-family: "Arial Regular";
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
 .swiper {
@@ -19,21 +19,25 @@ body {
 }
 
 .swiper-pagination {
-  bottom: 0%; /* высота кружков */
+  /* высота кружков */
+  bottom: 0%;
 }
 
 .swiper-pagination-bullet {
+  /* цвет кружков */
   background-color: #bc38d3;
 }
 
 .swiper-pagination-bullet-active {
+  /* цвет активного кружка */
   background-color: #bc38d3;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
+  /* высота и цвет навигации */
   color: #bc38d3;
-  top: 50%; /* высота навигации */
+  top: 50%;
 }
 
 .swiper-slide {
@@ -42,7 +46,7 @@ body {
   background: #333;
   margin: 0;
 
-  /* Center slide text vertically */
+  /* Center slide text vertically 
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -54,7 +58,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .swiper-slide img {
@@ -69,50 +73,73 @@ body {
   display: flex !important;
   justify-content: space-between;
   width: 100%;
-  margin: 1em !important;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .mdc-form-field label {
+  /* цвет текста лейбла в радио и чекбоксе */
   color: #aaaaaa;
   margin: 0 !important;
+  padding: 0 !important;
+  cursor: pointer;
 }
 
-.mat-mdc-radio-checked label {
+.mat-mdc-radio-checked label,
+.mat-mdc-checkbox-checked label {
+  /* цвет текста активного радио и чекбокса */
   color: #333333;
 }
 
 .mdc-form-field:hover label {
+  /* цвет текста радио и чекбокса при наведении */
   color: #333333;
 }
 
 .mat-mdc-radio-button {
   width: 100% !important;
   /* цвет фигуры */
-  --mdc-radio-disabled-selected-icon-color: #ff0000;
-  --mdc-radio-disabled-unselected-icon-color: #ff0000;
-  --mdc-radio-unselected-focus-icon-color: #bc38d3; /* нажатие и отведение */
-  --mdc-radio-unselected-hover-icon-color: #bc38d3; /* наведение */
   --mdc-radio-unselected-icon-color: #c262d3; /* изначальный */
   --mdc-radio-unselected-pressed-icon-color: #8f04a8; /* удержание */
+  --mdc-radio-unselected-focus-icon-color: #bc38d3; /* нажатие и отведение */
+  --mdc-radio-unselected-hover-icon-color: #bc38d3; /* наведение */
   --mat-mdc-radio-ripple-color: #c262d3; /* фон предвыбора */
-  --mdc-theme-text-primary-on-background: #333;
+  --mdc-theme-text-primary-on-background: #333333;
+  --mdc-radio-disabled-selected-icon-color: #333333;
+  --mdc-radio-disabled-unselected-icon-color: #333333;
 }
 
 .mat-accent {
   /* цвет выбора */
-  --mdc-radio-selected-focus-icon-color: #ff0000 !important;
+  --mdc-radio-selected-focus-icon-color: #333333 !important;
   --mdc-radio-selected-hover-icon-color: #c26bd1 !important; /* наведение */
   --mdc-radio-selected-icon-color: #bc38d3 !important; /* выбранный */
   --mdc-radio-selected-pressed-icon-color: #8f04a8 !important; /* удержание */
   --mat-mdc-radio-checked-ripple-color: #c26bd1 !important; /* фон */
 }
 
+.mat-mdc-checkbox.mat-accent {
+  /* цвет фигуры */
+  --mdc-checkbox-unselected-icon-color: #c262d3; /* изначальный */
+  --mdc-checkbox-unselected-pressed-icon-color: #8f04a8; /* удержание */
+  --mdc-checkbox-unselected-focus-icon-color: #bc38d3; /* нажатие и отведение */
+  --mdc-checkbox-unselected-hover-icon-color: #bc38d3; /* наведение */
+  --mdc-checkbox-disabled-selected-icon-color: #333333;
+  --mdc-checkbox-disabled-unselected-icon-color: #333333;
+
+  /* цвет выбора */
+  --mdc-checkbox-selected-checkmark-color: #ffffff; /* цвет выбора */
+  --mdc-checkbox-selected-focus-icon-color: #8f04a8;
+  --mdc-checkbox-selected-hover-icon-color: #c26bd1; /* наведение */
+  --mdc-checkbox-selected-icon-color: #bc38d3; /* выбранный */
+  --mdc-checkbox-selected-pressed-icon-color: #8f04a8; /* удержание */
+}
+
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #333333;
   color: #ffffff;
   height: 35px;
   width: 250px;

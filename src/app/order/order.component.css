@@ -30,25 +30,57 @@
   width: 100%;
 }
 
+.mat-label {
+  /* цвет текста лейбла */
+  color: #aaaaaa;
+}
+
+.mat-label:hover {
+  /* цвет текста лейбла при наведении */
+  color: #333333;
+}
+
+.input {
+  /* цвет текста инпута */
+  color: #333333 !important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  /* цвет фона инпута при наведении */
+  background-color: #000000 !important;
+}
+
 .radio-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
   height: 4em;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   border-bottom: 1px solid #b2b2b2;
   margin-bottom: 1em;
 }
 
-.radiobutton {
-  display: flex;
+.radio-row:hover {
+  background-color: #ffffff; /* цвет фона радио при наведении */
+  border-bottom: 1px solid #333333 !important; /* цвет линии при наведении */
 }
 
-.mdc-form-field {
+.mat-mdc-form-field-error {
+  /* настройка текста ошибки */
+  margin-left: 1em;
+}
+
+.radiobutton {
   display: flex;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  font-size: 22px;
+  margin-bottom: 2em;
 }
 
 .btn-styles {
@@ -56,6 +88,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
+}
+
+.ng-tns-c125-3 span {
+  margin-left: 1em;
 }
 
 @media screen and (max-width: 787px) {
