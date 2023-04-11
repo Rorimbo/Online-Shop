@@ -23,6 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NewsDialogComponent } from './news-dialog/news-dialog.component';
+import { AgreementDialogComponent } from './agreement-dialog/agreement-dialog.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CartComponent,
     OrderComponent,
     DialogComponent,
+    NewsDialogComponent,
+    AgreementDialogComponent,
   ],
   imports: [
     AppRoutingModule,

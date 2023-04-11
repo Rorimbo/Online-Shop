@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
+import { AgreementDialogComponent } from '../agreement-dialog/agreement-dialog.component';
 
 @Component({
   selector: 'app-order',
@@ -47,6 +48,14 @@ export class OrderComponent {
   openDialog() {
     this.dialog.open(DialogComponent, {
       data: { dialogText: 'Заказ оформлен' },
+    });
+  }
+
+  agreementDialog() {
+    const dialogRef = this.dialog.open(AgreementDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 }

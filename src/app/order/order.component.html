@@ -363,7 +363,9 @@
           class="agreement"
           value="Согласие"
         >
-          Согласие на обработку персональных данных</mat-checkbox
+          <a (click)="agreementDialog()"
+            >Согласие на обработку персональных данных</a
+          ></mat-checkbox
         >
         <mat-error
           *ngIf="
