@@ -9,8 +9,18 @@
   <div>
     <h1 class="news-title">{{ "новости" | uppercase }}</h1>
     <div class="news-blocks">
-      <div class="news-block"></div>
-      <div class="news-block"></div>
+      <div id="news-block-one">
+        <div class="text-block">
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repellendus, voluptatem quia natus tempora beatae aspernatur illo
+            aliquam ab quasi accusantium adipisci sit tempore? Praesentium,
+            tempora voluptas. Non pariatur eius reiciendis.
+            <a class="btn-open-click" (click)="newsDialog()">Read more</a>
+          </p>
+        </div>
+      </div>
+      <div id="news-block-two"></div>
     </div>
   </div>
 </div>
